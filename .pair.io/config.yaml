@@ -1,8 +1,11 @@
-pairio-image: 4e44c1d6e4b0c4e04d831c1c-zkim-zkim/pairio-quickstart-base
-size: large
-inbound-ports:
-  - 22
-  - 80
-  - 443
-  - 8080
-  - 8081
+default:
+  pairio-image: 4e44c1d6e4b0c4e04d831c1c-zkim-zkim/pairio-quickstart-base
+  size: large
+  inbound-ports: [22, 80, 443, 8080, 8443]
+  provision: none
+
+build-image:
+  image-id: ami-1aad5273
+  size: large
+  inbound-ports: [22, 80, 443, 8080, 8443]
+  provision: none
