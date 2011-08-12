@@ -1,0 +1,16 @@
+#!/bin/bash
+
+LOGIN=$1
+
+M2=/etc/pair.io/.m2
+
+if [ ! "$LOGIN" ]; then
+   echo "Usage: instance-user LOGIN"
+   exit 1
+fi
+
+if [ -d "$M2" ]; then
+   echo "Seeding $LOGIN's .m2"
+   cp -R /etc/pair.io/.m2 /home/$LOGIN/.m2
+   chown -R $LOGIN:$LOGIN /home/$LOGIN/.m2
+fi
