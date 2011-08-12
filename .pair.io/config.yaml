@@ -1,5 +1,5 @@
 default:
-  pairio-image: 4e44c1d6e4b0c4e04d831c1c-zkim-zkim/pairio-quickstart-base
+  image-id: ami-cef405a7
   size: large
   inbound-ports: [22, 80, 443, 8080, 8443]
   provision: none
